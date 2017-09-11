@@ -1,0 +1,19 @@
+.dashboard-container{
+    h4{
+        font-weight: bold;
+    }
+    article{
+       margin: 20px 0;
+       padding: 15px 0;
+       p{
+           font-size: 14px;
+       }
+    }
+    em{
+        font-size: 14px;
+    }
+    span.date{
+        font-size: 12px;
+        font-style: italic;
+    }
+}

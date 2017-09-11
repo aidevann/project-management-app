@@ -1,0 +1,20 @@
+machine:
+  node:
+    version: 6.8
+
+dependencies:
+  pre:
+    - rm -rf node_modules
+
+test:
+  override:
+    - npm run build
+  post:
+    - if [[ -z $CIRCLE_PR_USERNAME ]] ; then npm run coveralls ; fi
+    - mv ./coverage ${CIRCLE_ARTIFACTS}
+
+deployment:
+  production:
+    branch: master
+    commands:
+      - ./node_modules/.bin/firebase deploy --token $FIREBASE_TOKEN

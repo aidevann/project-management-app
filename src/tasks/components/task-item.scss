@@ -1,0 +1,17 @@
+.task-item{
+    margin-top: 15px;
+    i{
+        padding-right: 5px;
+        &:hover{
+            color: #3d3a3a;
+            cursor: pointer;
+        }
+    }
+    span{
+        display: inline-block;
+        margin-left: 15px;
+    }
+}
+.fa-floppy-o{
+    font-size: 15px;
+}
